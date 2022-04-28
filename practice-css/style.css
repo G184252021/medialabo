@@ -29,13 +29,14 @@ pli {
 /* header and footer */
 
 header, footer {
-  background-colour: teal;
+  background-color: teal;
   height: 10em;
   padding: 2em;
+  margin-top: 35px;
 }
 
 h1, footer p {
-  margin: -70px;
+  margin: 0px;
 }
 
 h1 {
@@ -47,6 +48,8 @@ h1 {
 
 main {
   padding: 2em;
+  font-size: medium;
+  font-weight: bold;
 }
 
 main p, main li {
@@ -54,6 +57,10 @@ main p, main li {
 }
 
 img {
-  float: right
+  float: right;
+  margin-left: 59px;
   margin: 1.2em 2em;
+}
+footer {
+  font-size:medium;
 }
