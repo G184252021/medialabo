@@ -22,11 +22,11 @@ function hantei() {
     console.log(kaisu + "回目の予想: " + yoso);
     if (kaisu < 4) {
         if (yoso === kotae) {
-            if (kaisu > 1) {
-                console.log("答えは " + kotae + " でした。すでにゲームは終わっています");
+            if (kaisu === 1) {
+                console.log("正解です。おめでとう！");
             }
             else {
-                console.log("正解です。おめでとう！");
+                console.log("答えは " + kotae + " でした。すでにゲームは終わっています");
             }
         }
         else if (kotae < yoso) {
