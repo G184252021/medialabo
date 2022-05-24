@@ -51,5 +51,4 @@ function hantei() {
         re.insertAdjacentElement('afterend', p);
         console.log("答えは " + kotae + " でした。すでにゲームは終わっています");
     }
-
 }
