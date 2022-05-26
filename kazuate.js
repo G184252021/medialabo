@@ -1,6 +1,6 @@
 // 答え
 let kotae = Math.floor(Math.random() * 10) + 1;
-console.log("答え(デバッグ用): " + kotae);      // デバッグ用
+console.log('答え(デバッグ用): ' + kotae);      // デバッグ用
 
 // 入力回数（予想回数）
 let kaisu = 0;
@@ -42,7 +42,7 @@ function hantei() {
                 sum += 1;
             }
             else{
-                p.textContent = '答えは ' + kotae + ' でした。すでにゲームは終わっています';
+                p.textContent = '正解です! すでにゲームは終わっています';
             }
             
         }
