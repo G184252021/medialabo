@@ -18,7 +18,7 @@ function hantei() {
 
     let i = document.querySelector('input[name="integer"]');
     let integer = i.value;       // ユーザが記入した文字列
-    console.log('答え(デバッグ用): ' + integer);
+    console.log('予想(デバッグ用): ' + integer);
     let yoso = Number(integer);
 
 
@@ -48,7 +48,7 @@ function hantei() {
         }
     }
     else {
-        p.textContent = '答えは " + kotae + " でした。すでにゲームは終わっています';
+        p.textContent = '答えは ' + kotae + ' でした。すでにゲームは終わっています';
 //       console.log("答えは " + kotae + " でした。すでにゲームは終わっています");
     }
 
