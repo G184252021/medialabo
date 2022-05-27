@@ -46,9 +46,4 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-for(let i=0; i<weather.length; i=i+1){
-  console.log(data.weather[i]);
-}
-for(let i=0; i<main.length; i=i+1){
-  console.log(data.main[i]);
-}
+console.log(date[1]);
