@@ -46,4 +46,5 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-console.log(date[1]);
+console.log(data.name);
+console.log(main.temp_max);
