@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>世界の天気</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <link rel="stylesheet" href="projecthtml.css">
     <script src="weather.js" defer></script>
 </head>
 <body>
     <table border="1">
         <!-- <colgroup span="6"></colgroup> -->
+        <!--
         <tr>
             <th>国</th>
             <th>都市</th>
@@ -35,9 +37,16 @@
             <th>2</th>
             <th>100</th>
         </tr>
-
+-->
     </table>
 </table>
+<h1>世界の天気</h1>
+<p>以下のボタンを押すと，サーバに通信します．結果はコンソールに出力します．</p>
+<button id="sendRequest">通信</button>
+
+<div id="id"></div>
+<div id="max"></div>
+<div id="min"></div>
     
 </body>
 </html>
