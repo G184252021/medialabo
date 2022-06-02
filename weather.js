@@ -47,15 +47,13 @@ let data = {
 
 ////////// 課題3-2 ここからプログラムを書こう
 let toshi = document.querySelector('div#name');
-toshi.textContent = (data.name);
+toshi.textContent = '都市名:' + data.name;
 
 let max = document.querySelector('div#max');
-max.textContent = (data.main.temp_max);
+max.textContent = '最高気温:' + data.main.temp_max + '°C';
 
 let min = document.querySelector('div#min');
-min.textContent = (data.main.temp_min);
-
-
+min.textContent = '最低気温:' + data.main.temp_min + '°C';
 
 
 let b = document.querySelector('#sendRequest');
@@ -93,17 +91,41 @@ function showResult(resp) {
 	// data.x を出力
 	console.log(data.x);
   
+  //緯度
   let coordlon = document.querySelector('div#coordlon');
-  coordlon.textContent ='緯度' + data.coord.lon;
+  coordlon.textContent = data.coord.lon;
 
+  //経度
   let coordlat = document.querySelector('div#coordlat');
-  coordlat.textContent ='経度' + data.coord.lat;
+  coordlat.textContent = data.coord.lat;
 
+  //天気
   let weatherDescription = document.querySelector('div#weatherDescription');
   weatherDescription.textContent = data.weather.description;
 
+  //最低気温
   let mainMin = document.querySelector('div#mainMin');
-  mainMin.textContent ='最低気温' + data.main.temp_min;
+  mainMin.textContent = data.main.temp_min;
+
+  //最高気温
+  let mainMax = document.querySelector('div#mainMax');
+  mainMax.textContent = data.main.temp_max;
+
+  //湿度
+  let mainHumidity = document.querySelector('div#mainHumidity');
+  mainHumidity.textContent = data.main.humidity;
+
+  //風速
+  let windSpeed = document.querySelector('div#windSpeed');
+  windSpeed.textContent = data.wind.speed;
+
+  //風向
+  let windDeg = document.querySelector('div#windDeg');
+  windDeg.textContent = data.wind.deg;
+
+  //都市名
+  let Name = document.querySelector('div#Name');
+  Name.textContent = data.name;
 }
 
 // 通信エラーが発生した時の処理
@@ -116,3 +138,88 @@ function finish() {
 	console.log('Ajax 通信が終わりました');
 }
 
+//ボタン
+//カイロ
+const buttonCairo = document.querySelector('#buttonCairo')
+buttonCairo.addEventListener('click', () => {
+  navigator.clipboard.writeText('360630');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonCairo.innerHTML = 'copy', 5);
+})
+//モスクワ
+const buttonMoscow = document.querySelector('#buttonMoscow')
+buttonMoscow.addEventListener('click', () => {
+  navigator.clipboard.writeText('524901');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonMoscow.innerHTML = 'copy', 5);
+})
+//ヨハネスブルク
+const buttonJohannesburg = document.querySelector('#buttonJohannesburg')
+buttonJohannesburg.addEventListener('click', () => {
+  navigator.clipboard.writeText('993800');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonJohannesburg.innerHTML = 'copy', 5);
+})
+//北京
+const buttonBeijing = document.querySelector('#buttonBeijing')
+buttonBeijing.addEventListener('click', () => {
+  navigator.clipboard.writeText('1816670');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonBeijing.innerHTML = 'copy', 5);
+})
+//東京
+const buttonTokyo = document.querySelector('#buttonTokyo')
+buttonTokyo.addEventListener('click', () => {
+  navigator.clipboard.writeText('1850147');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonTokyo.innerHTML = 'copy', 5);
+})
+//シンガポール
+const buttonSingapore = document.querySelector('#buttonSingapore')
+buttonSingapore.addEventListener('click', () => {
+  navigator.clipboard.writeText('1880252');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonSingapore.innerHTML = 'copy', 5);
+})
+//シドニー
+const buttonSydney = document.querySelector('#buttonSydney')
+buttonSydney.addEventListener('click', () => {
+  navigator.clipboard.writeText('2147714');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonSydney.innerHTML = 'copy', 5);
+})
+//ロンドン
+const buttonLondon = document.querySelector('#buttonLondon')
+buttonLondon.addEventListener('click', () => {
+  navigator.clipboard.writeText('2643743');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonLondon.innerHTML = 'copy', 5);
+})
+//パリ
+const buttonParis = document.querySelector('#buttonParis')
+buttonParis.addEventListener('click', () => {
+  navigator.clipboard.writeText('2968815');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonParis.innerHTML = 'copy', 5);
+})
+//リオデジャネイロ
+const buttonRio = document.querySelector('#buttonRio')
+buttonRio.addEventListener('click', () => {
+  navigator.clipboard.writeText('3451189');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonRio.innerHTML = 'copy', 5);
+})
+//ニューヨーク
+const buttonNY = document.querySelector('#buttonNY')
+buttonNY.addEventListener('click', () => {
+  navigator.clipboard.writeText('5128581');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonNY.innerHTML = 'copy', 5);
+})
+//ロサンゼルス
+const buttonLA = document.querySelector('#buttonLA')
+buttonLA.addEventListener('click', () => {
+  navigator.clipboard.writeText('5368361');
+  //button.innerHTML = 'コピー完了！'
+  setTimeout(() => buttonLA.innerHTML = 'copy', 5);
+})
