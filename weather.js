@@ -223,3 +223,31 @@ buttonLA.addEventListener('click', () => {
   //button.innerHTML = 'コピー完了！'
   setTimeout(() => buttonLA.innerHTML = 'copy', 5);
 })
+
+//mouseover
+let test = document.getElementById("test");
+
+// このハンドラーは、カーソルが順序なしリストの上を移動した
+// ときに1度だけ実行されます
+test.addEventListener("mouseenter", function( event ) {
+  // mouseenter の対象を強調
+  event.target.style.color = "purple";
+
+  // 少し待ってから色をリセット
+  setTimeout(function() {
+    event.target.style.color = "";
+  }, 500);
+}, false);
+
+
+// このハンドラーは異なるリスト項目の上を移動するごとに
+// 実行されます
+test.addEventListener("mouseover", function( event ) {
+  // mouseover の対象を強調
+  event.target.style.color = "orange";
+
+  // 少し待ってから色をリセット
+  setTimeout(function() {
+    event.target.style.color = "";
+  }, 500);
+}, false);
