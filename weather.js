@@ -46,14 +46,14 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-let p1 = document.querySelector('div#id');
-p1.textContent = (data.name);
+let toshi = document.querySelector('div#name');
+toshi.textContent = (data.name);
 
-let p2 = document.querySelector('div#max');
-p2.textContent = (data.main.temp_max);
+let max = document.querySelector('div#max');
+max.textContent = (data.main.temp_max);
 
-let p3 = document.querySelector('div#min');
-p3.textContent = (data.main.temp_min);
+let min = document.querySelector('div#min');
+min.textContent = (data.main.temp_min);
 
 
 
@@ -63,8 +63,11 @@ b.addEventListener('click', sendRequest);
 
 // 通信を開始する処理
 function sendRequest() {
+  let e = document.querySelector('input[name=toshiID]');
+  let key = e.value;
+
 	// URL を設定
-	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/1816670.json';
+	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+key+'.json';
 
 	// 通信開始
 	axios.get(url)
@@ -78,9 +81,10 @@ function showResult(resp) {
 	// サーバから送られてきたデータを出力
 	let data = resp.data;
 
+  
 	// data が文字列型なら，オブジェクトに変換する
 	if (typeof data === 'string') {
-		data = JSON.parse(data);
+		data = JSON.parse(data);   
 	}
 
 	// data をコンソールに出力
@@ -88,6 +92,18 @@ function showResult(resp) {
 
 	// data.x を出力
 	console.log(data.x);
+  
+  let coordlon = document.querySelector('div#coordlon');
+  coordlon.textContent ='緯度' + data.coord.lon;
+
+  let coordlat = document.querySelector('div#coordlat');
+  coordlat.textContent ='経度' + data.coord.lat;
+
+  let weatherDescription = document.querySelector('div#weatherDescription');
+  weatherDescription.textContent = data.weather.description;
+
+  let mainMin = document.querySelector('div#mainMin');
+  mainMin.textContent ='最低気温' + data.main.temp_min;
 }
 
 // 通信エラーが発生した時の処理
@@ -99,3 +115,4 @@ function showError(err) {
 function finish() {
 	console.log('Ajax 通信が終わりました');
 }
+

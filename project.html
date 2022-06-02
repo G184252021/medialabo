@@ -10,43 +10,55 @@
     <script src="weather.js" defer></script>
 </head>
 <body>
+    <h1>世界の天気</h1>
     <table border="1">
         <!-- <colgroup span="6"></colgroup> -->
-        <!--
         <tr>
-            <th>国</th>
-            <th>都市</th>
-            <th>天気</th>
-            <th>最高(℃)</th>
-            <th>最低(℃)</th>
-            <th>降水確率(%)</th>
+            <th>ID</th>
+            <th>地域</th>
+            <th>都市名</th>
         </tr>
         <tr>
-            <th>カイロ</th>
+            <th>360630</th>
             <th>エジプト</th>
-            <th>晴れ</th>
-            <th>30</th>
-            <th>0</th>
-            <th>0</th>
+            <th>カイロ</th>
         </tr>
         <tr>
-            <th>モスクワ</th>
+            <th>524901</th>
             <th>ロシア</th>
-            <th>晴れ</th>
-            <th>20</th>
-            <th>2</th>
-            <th>100</th>
+            <th>モスクワ</th>
         </tr>
--->
+        <tr>
+            <th>993800</th>
+            <th>南アフリカ</th>
+            <th>ヨハネスブルク</th>
+        </tr>
+        <tr>
+            <th>1816670</th>
+            <th>中華人民共和国</th>
+            <th>北京</th>
+        </tr>
+        <tr>
+            <th>1850147</th>
+            <th>日本</th>
+            <th> 東京</th>
+        </tr>
     </table>
 </table>
-<h1>世界の天気</h1>
-<p>以下のボタンを押すと，サーバに通信します．結果はコンソールに出力します．</p>
-<button id="sendRequest">通信</button>
 
-<div id="id"></div>
+<div id="name"></div>
 <div id="max"></div>
 <div id="min"></div>
-    
+
+<label for="toshiID">都市名ID:</label>
+<input type="text" name="toshiID" id="toshiID" size="10">
+<button id="print">検索</button>
+<button id="sendRequest">通信</button>
+<div id="coordlon"></div>
+<div id="coordlat"></div>
+<div id="weatherDescription"></div>
+<div id="mainMin"></div>
+<div id="mainMax"></div>
+
 </body>
 </html>
