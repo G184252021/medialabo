@@ -37,3 +37,16 @@ table {
     font-family: sans-serif;
     font-size: .8rem;
 }
+
+
+/*  見出し  */
+h1,
+h2 {
+    padding: 1rem;
+    border-left: 5px solid #000;
+    background: #eee;
+}
+
+
+
+/*  検索ボタン  */

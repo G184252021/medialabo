@@ -101,7 +101,7 @@ function showResult(resp) {
 
   //天気
   let weatherDescription = document.querySelector('div#weatherDescription');
-  weatherDescription.textContent = data.weather.description;
+  weatherDescription.textContent = ''+data.weather.description;
 
   //最低気温
   let mainMin = document.querySelector('div#mainMin');
