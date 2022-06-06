@@ -74,7 +74,7 @@ h1 span {
   background: #eee;
 }
 
-/*  フォント  */
+
 .outer {
   text-align: center;
 }
@@ -83,4 +83,10 @@ h1 span {
   font-size: 25px;
   display: inline-block;
   text-align: left;
+}
+
+img {
+  float: right;
+  margin-left: 59px;
+  margin: 1.2em 2em;
 }
